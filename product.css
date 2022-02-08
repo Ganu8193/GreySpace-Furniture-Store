@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat:ital@1&family=Poppins:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+*{
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+body{
+	background-color: brown;
+}
+nav{
+	/*z-index: 1;
+	width: 100%;
+	position: fixed;*/
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	min-height: 120px;
+	background-color: black;
+}
+li, a, button{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+header img{
+	margin-top: 15px;
+	height:90px;
+}
+nav ul{
+	display: inline-block;
+	margin-right: 60px;
+}
+nav ul li{
+	font-size: 20px;
+	display: inline-flex;
+	padding: 0px 20px;
+	align-items: center;
+}
+nav ul li a{
+	transition: all 0.3s ease 0s;
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
+}
+nav ul li a:hover{
+	color: #D79771;
+	text-decoration: none;
+}
+.nav-links{
+	margin-top: 40px;
+	float: right;
+}
+header{
+	height: 120px;
+}
+.logo{
+	margin-left: 40px;
+	display: inline-block;
+	cursor: pointer;
+}
+.toggle-button{
+	position: absolute;
+	top: 40px;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+}
+.toggle-button .bar{
+	height: 3px;
+	width: 100%;
+	border: none;
+	background-color: white;
+	border-radius: 10px;
+}
+
+
+.filter-condition{
+	background: transparent;
+	font-family: montserrat;
+	font-weight: bold;
+	float: right;
+	margin: 40px 80px 20px 0;
+}
+.filter-condition select{
+	cursor: pointer;
+	font-weight: bold;
+	background-color: lightgrey;
+	/*font-family: verdana;*/
+	border: none;
+	color: purple;
+}
+.filter-condition select option{
+	background-color: white;
+}
+
+
+.scroll-btn{
+	color: black;
+	z-index: 1;
+	background-color: white;
+	border-radius: 50%;
+	padding: 12px 18px;
+	position: fixed;
+	left: 90%;
+	top: 90%;
+	transition:0.3s all;
+}
+.scroll-btn:hover i{
+
+	color: white;
+}
+.scroll-btn:hover{
+	background-color: black;
+}
+.products .card{
+
+	height: 360px;
+	/*padding: 5px;*/
+	border: none;
+	margin:  15px;
+	background-color: lightgrey;
+	color: black;
+	text-align: center;
+}
+.buy-btn{
+	cursor: pointer;
+	font-family: montserrat, sans-serif;
+	color:white;
+	/*display: none;*/
+	font-weight: bold;
+	padding: 9px;
+	border: none;
+	border-radius: 3px;
+	background-color: black;
+	transform: translateY(15px);
+	opacity: 0;
+	transition: 0.2s all;
+}
+.buy-btn:hover{
+	color: white;
+	background-color: #854836;
+	transition: all 0.5s;
+
+}
+.products .card:hover .buy-btn{
+	opacity: 1;
+	transform: translateY(-5px);
+}
+.products .card:hover img{
+	opacity: 0.8;
+	transition: 0.3s all;
+}
+.products{
+	margin-top: 100px;
+}
+.card-body{
+	font-family: montserrat, sans-serif;
+	font-weight: bold;
+}
+
+.card-body i{
+	padding: 8px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+.card-body i:hover{
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+	color: red;
+	transition: 0.3s all;
+}
+.products ul{
+	flex-basis: 100%	;
+	display: inline-block;
+	list-style: none;
+}
+.products ul li{
+	width: 100%;
+	display: inline-block;
+}
+
+@media screen and (max-width: 830px){
+
+	.toggle-button{
+		position: absolute;
+		top: 45px;
+		display: flex;
+	}
+	.nav-links
+	{	z-index: 1;
+		position: absolute;
+		flex-direction: column;
+		top: 10%;
+		right: -60px;
+		height: 35%;
+		width: 50%;
+		background-color: black;
+		display: flex;
+		display: none;
+		align-items: center;
+	}
+	.navbar{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.nav-links ul{
+		display: flex;
+		/*width: 100%;*/
+		flex-direction: column;
+
+	}
+	nav ul li a{
+
+		padding: 10px;
+		margin: 10px;
+	}
+	.nav-links.active{
+		display: flex;
+		transition: all 0.5s ease-in;
+	}
+	.col-lg-6 pre{
+		font-family: montserrat, sans-serif;
+		font-size: 25px;
+	}
+	.col-lg-6 img{
+		margin-top: 0px;
+	}
+	.logo{
+		margin-bottom: 40px;
+		max-height: 50px;
+		max-width: 180px;
+		width: 90%;
+	}
+}
+footer{
+	background-color: black;
+
+}
+.footer-one{
+	padding: 15px;
+}
+.footer-one h4, h5{
+	color: lightgrey;
+}
+.footer-one p{
+	color: white;
+	float: left;
+}
+.footer-one img{
+	cursor: pointer;
+	width: 100%;
+	float: left;
+}
+.footer-one ul{
+	margin-left: 50px;
+	text-decoration-style: none;
+}
+.footer-one ul li a{
+	color: white;
+	font-size: 20px;
+}
+.footer-featured li{
+	text-decoration: none;
+	margin-left: 20px;
+}
+.footer-featured li a:hover{
+	color: #D67D3E;
+	transition: 0.3s all;
+}
+.contacts li{
+	display: inline-block;
+	padding: 10px;
+	margin-left: -10px;
+	font-size: 15px;
+}
+.footer-one h4{
+	font-family: montserrat, sans-serif;
+	text-align: center;
+}
+.contacts li i:hover{
+	/*font-size: 10px;*/
+	color: #1572A1;
+	transition: 0.5s all;
+}
+.copyright hr{
+	color: white;
+	/*border:1px solid white;*/
+}
+.copyright p{
+	color: white;
+	text-align: center;
+}
+
+
+@media (max-width: 576px) {  
+  .xs {color:red;font-weight:bold;}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width:768px) {  
+  .sm {color:red;font-weight:bold;}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width:992px) {  
+ .md {color:red;font-weight:bold;}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width:1200px) { 
+ .lg {color:red;font-weight:bold;}
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .xl {color:red;font-weight:bold;}
+}
